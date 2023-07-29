@@ -1,0 +1,31 @@
+#top_header{
+    .row {
+        display: flex;
+        gap: 2rem;
+        justify-content: end;
+        color: $t1;
+        font-weight: 600;
+        a {
+            text-decoration: none;
+            color: $t1;
+            font-weight: 600;
+        }
+        .content {
+            padding: .51rem 0 0;
+            font-size: .8rem;
+            font-weight: 600;
+        }
+
+        .bx::before {
+            font-size: 1.5rem;
+            position: absolute;
+            top: 0;
+            padding: 5px 0;
+            margin: 0 -24px;
+        }
+    }
+
+    .opening_time {
+        padding: 0 2rem 0 0;
+    }
+}

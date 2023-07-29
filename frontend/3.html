@@ -1,0 +1,107 @@
+<style>
+    
+    .galery_part_po .gallery_new_post {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 400px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .galery_part_po .gallery_popup_image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+    }
+
+    .galery_part_po .gallery_popup_image.active {
+      display: block;
+    }
+
+    .galery_part_po .prev_icon,
+    .galery_part_po .next_icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .galery_part_po .prev_icon {
+      left: 10px;
+    }
+
+    .galery_part_po .next_icon {
+      right: 10px;
+    }
+
+</style>
+
+
+<div class="galery_part_po">
+  <div class="gallery_new_post">
+    <img src="img/glass.jpeg" alt="Image 1" class="gallery_popup_image active">
+    <img src="img/pvc windows.jpg" alt="Image 2" class="gallery_popup_image">
+    <img src="img/pvc-min.png" alt="Image 3" class="gallery_popup_image">
+    <img src="img/pvc frontdoor.jpg" alt="Image 4" class="gallery_popup_image">
+    <img src="img/alu.png" alt="Image 5" class="gallery_popup_image">
+    <img src="img/pvc-min.png" alt="Image 6" class="gallery_popup_image">
+  </div>
+
+  <span class="prev_icon" onclick="showPreviousImage()">&lt;</span>
+  <span class="next_icon" onclick="showNextImage()">&gt;</span>
+  <a href="" class="download_icon" download onclick="downloadImage()">
+    Downlad
+  </a>
+</div>
+
+<script>
+    const galleryImages = document.querySelectorAll('.gallery_popup_image');
+    let currentIndex = 0;
+
+    function showImage(index) {
+      galleryImages.forEach((image, idx) => {
+        if (idx === index) {
+          image.classList.add('active');
+        } else {
+          image.classList.remove('active');
+        }
+      });
+    }
+
+    function showNextImage() {
+      currentIndex++;
+      if (currentIndex >= galleryImages.length) {
+        currentIndex = 0;
+      }
+      showImage(currentIndex);
+    }
+
+    function showPreviousImage() {
+      currentIndex--;
+      if (currentIndex < 0) {
+        currentIndex = galleryImages.length - 1;
+      }
+      showImage(currentIndex);
+    }
+
+    function downloadImage() {
+      const galleryImages = document.querySelectorAll('.gallery_popup_image');
+      const activeIndex = currentIndex % galleryImages.length;
+      const activeImage = galleryImages[activeIndex];
+      const imageUrl = activeImage.getAttribute('src');
+      
+      // Create a temporary anchor element
+      const downloadLink = document.createElement('a');
+      downloadLink.href = imageUrl;
+      downloadLink.setAttribute('download', '');
+      downloadLink.click();
+    }
+
+
+</script>

@@ -1,0 +1,23 @@
+section#privacy_policy {
+    padding: 3rem 0;
+    .description {
+        font-size: 15px;
+        color: #564D4D;
+        opacity: 0.85;
+        ol.list_privacy {
+            li.list_pricay {
+                padding: 1rem 0;
+                ul.ref {
+                    list-style: none;
+                    padding: 0 1rem;
+                    li{
+                        padding: 14px 0 1rem;
+                    }
+                    li::before {
+                        content: "-"; /* Unicode character for bullet (•) */
+                    }
+                }
+            }
+        }
+    }
+}

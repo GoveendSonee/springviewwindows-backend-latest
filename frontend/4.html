@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Testimonials</title>
+
+<style>
+    .testimonial-column {
+        cursor: pointer;
+    }
+
+    .testimonial-column .testimonial-name {
+        font-weight: bold;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .testimonial-column .popup-container {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        overflow: auto;
+    }
+
+    .testimonial-column .popup-content {
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        margin: 20px;
+    }
+
+    .testimonial-column .close-icon {
+        color: #fff;
+        font-size: 35px;
+        font-weight: bold;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        cursor: pointer;
+    }
+
+    .testimonial-column .gallery-slider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .testimonial-column .gallery-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: none;
+    }
+
+    .testimonial-column .gallery-image.active {
+        display: block;
+    }
+
+    .testimonial-column .prev-icon,
+    .testimonial-column .next-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .testimonial-column .prev-icon {
+        left: 10px;
+    }
+
+    .testimonial-column .next-icon {
+        right: 10px;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="testimonial-column" onclick="openPopup(1)">
+        <div class="testimonial-name">
+            John Doe
+        </div>
+
+        <div class="popup-container" id="popup-container-1">
+            <div class="popup-content">
+            <div class="gallery-slider" id="gallery-slider-1">
+                <img src="img/glass.jpeg" alt="Image 1" class="gallery-image active">
+                <img src="img/frontdoor.png" alt="Image 2" class="gallery-image">
+                <!-- Add more images here -->
+            </div>
+            <div class="slider-navigation">
+                <span class="prev-icon" onclick="showPreviousImage(1)">&lt;</span>
+                <span class="next-icon" onclick="showNextImage(1)">&gt;</span>
+            </div>
+            <a href="#" class="download-icon" download>
+                ⬇️
+              </a>
+            </div>
+            <span class="close-icon" onclick="closePopupByIcon(event, 1)">&times;</span>
+
+        </div>
+
+</div>
+
+<div class="testimonial-column" onclick="openPopup(2)">
+    <div class="testimonial-name">
+        Jane Smith
+    </div>
+
+    <div class="popup-container" id="popup-container-2">
+        <div class="popup-content">
+        <div class="gallery-slider" id="gallery-slider-2">
+            <img src="img/pvc.jpeg" alt="Image 3" class="gallery-image active">
+            <img src="img/pvc frontdoor.jpg" alt="Image 4" class="gallery-image">
+            <!-- Add more images here -->
+        </div>
+        <div class="slider-navigation">
+            <span class="prev-icon" onclick="showPreviousImage(2)">&lt;</span>
+            <span class="next-icon" onclick="showNextImage(2)">&gt;</span>
+        </div>
+        </div>
+        <span class="close-icon" onclick="closePopupByIcon(event, 2)">&times;</span>
+
+    </div>
+
+</div>
+
+<div class="testimonial-column" onclick="openPopup(9)">
+    <div class="testimonial-name">
+        John Smith
+    </div>
+
+    <div class="popup-container" id="popup-container-9">
+        <div class="popup-content">
+        <div class="gallery-slider" id="gallery-slider-9">
+            <img src="image17.jpg" alt="Image 17" class="gallery-image active">
+            <img src="image18.jpg" alt="Image 18" class="gallery-image">
+            <!-- Add more images here -->
+        </div>
+        <div class="slider-navigation">
+            <span class="prev-icon" onclick="showPreviousImage(9)">&lt;</span>
+            <span class="next-icon" onclick="showNextImage(9)">&gt;</span>
+        </div>
+        </div>
+        <span class="close-icon" onclick="closePopupByIcon(event, 9)">&times;</span>
+
+    </div>
+
+</div>
+
+<script>
+    function openPopup(index) {
+      var popupContainer = document.getElementById("popup-container-" + index);
+      popupContainer.style.display = "block";
+    }
+  
+    function closePopup(index) {
+      var popupContainer = document.getElementById("popup-container-" + index);
+      popupContainer.style.display = "none";
+    }
+  
+    function showNextImage(index) {
+      var gallerySlider = document.getElementById("gallery-slider-" + index);
+      var activeImage = gallerySlider.querySelector(".gallery-image.active");
+      var nextImage = activeImage.nextElementSibling;
+  
+      if (!nextImage) {
+        // If there is no next image, select the first image
+        nextImage = gallerySlider.querySelector(".gallery-image:first-child");
+      }
+  
+      activeImage.classList.remove("active");
+      nextImage.classList.add("active");
+    }
+  
+    function showPreviousImage(index) {
+      var gallerySlider = document.getElementById("gallery-slider-" + index);
+      var activeImage = gallerySlider.querySelector(".gallery-image.active");
+      var previousImage = activeImage.previousElementSibling;
+  
+      if (!previousImage) {
+        // If there is no previous image, select the last image
+        previousImage = gallerySlider.querySelector(".gallery-image:last-child");
+      }
+  
+      activeImage.classList.remove("active");
+      previousImage.classList.add("active");
+    }
+  
+    function closePopupByIcon(event, index) {
+      event.stopPropagation();
+      closePopup(index);
+    }
+
+    function downloadImage() {
+    const activeImage = document.querySelector('.gallery-slider .gallery-image.active');
+    const imageUrl = activeImage.getAttribute('src');
+    
+    // Create a temporary anchor element
+    const downloadLink = document.createElement('a');
+    downloadLink.href = imageUrl;
+    downloadLink.setAttribute('download', '');
+    downloadLink.click();
+    }
+
+  </script>
+
+</body>
+</html>

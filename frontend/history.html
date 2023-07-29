@@ -1,0 +1,73 @@
+<style>
+
+  ul li .description {
+      top: 0;
+      margin: 0;
+      position: relative;
+      top: -15px;
+  }
+  .description .collapsed{
+    transition: all ease-in-out 0.5s;
+    height: 1rem;
+    overflow: hidden;
+    color: #564D4D;
+    font-size: 15px;
+    margin:  0 0 1rem 0;
+    padding: 0 1rem 0 0rem;
+    list-style: none;
+  }
+
+
+  .description p{
+    height: auto;
+    color: #564D4D;
+    font-size: 15px;
+    margin:  0 0 1rem 0;
+    padding: 0 1rem 0 0rem;
+    list-style: none;
+  }
+
+</style>
+
+<div class="description">
+  <div class="collapsed">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed consequat ipsum. Integer commodo nunc auctor, varius tortor non, molestie ligula. Pellentesque vitae dolor condimentum, volutpat tortor ac, sagittis nisi. Phasellus consectetur rhoncus risus, nec volutpat tortor maximus et. Duis viverra tincidunt lacus vel scelerisque. Aliquam ullamcorper enim eu orci gravida, ut faucibus felis ullamcorper. Aliquam semper lacus vitae felis maximus rhoncus. Ut ullamcorper nunc nec dictum varius. Donec ac arcu mauris. Curabitur nec urna dui. Sed sit amet purus et est efficitur tempus. Nam laoreet bibendum lacus, non iaculis libero commodo ut.
+    </p>
+    </div>
+  <button class="read-more" onclick="toggleDescription(this)">Read More</button>
+</div>
+
+<div class="description">
+  <div class="collapsed">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed consequat ipsum. Integer commodo nunc auctor, varius tortor non, molestie ligula. Pellentesque vitae dolor condimentum, volutpat tortor ac, sagittis nisi. Phasellus consectetur rhoncus risus, nec volutpat tortor maximus et. Duis viverra tincidunt lacus vel scelerisque. Aliquam ullamcorper enim eu orci gravida, ut faucibus felis ullamcorper. Aliquam semper lacus vitae felis maximus rhoncus. Ut ullamcorper nunc nec dictum varius. Donec ac arcu mauris. Curabitur nec urna dui. Sed sit amet purus et est efficitur tempus. Nam laoreet bibendum lacus, non iaculis libero commodo ut.
+    </p>
+  </div>
+  <button class="read-more" onclick="toggleDescription(this)">Read More</button>
+</div>
+
+<div class="description">
+  <div class="collapsed">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed consequat ipsum. Integer commodo nunc auctor, varius tortor non, molestie ligula. Pellentesque vitae dolor condimentum, volutpat tortor ac, sagittis nisi. Phasellus consectetur rhoncus risus, nec volutpat tortor maximus et. Duis viverra tincidunt lacus vel scelerisque. Aliquam ullamcorper enim eu orci gravida, ut faucibus felis ullamcorper. Aliquam semper lacus vitae felis maximus rhoncus. Ut ullamcorper nunc nec dictum varius. Donec ac arcu mauris. Curabitur nec urna dui. Sed sit amet purus et est efficitur tempus. Nam laoreet bibendum lacus, non iaculis libero commodo ut.
+    </p> 
+  </div>
+  <button class="read-more" onclick="toggleDescription(this)">Read More</button>
+</div>
+
+<script>
+  function toggleDescription(button) {
+    var description = button.previousElementSibling;
+    description.classList.toggle('collapsed');
+    button.textContent = description.classList.contains('collapsed') ? 'Read More' : 'Read Less';
+  }
+</script>
+
+
+section#category_single .category_details .swiper-button-next, section#category_single .category_details .swiper-button-prev, section#category_single .category_details .swiper-rtl .swiper-button-next, section#category_single .category_details .swiper-rtl .swiper-button-prev{
+  top: 9rem;
+}
+
+@media only screen and (max-width: 1100px){
+  section#category_single .category_details .swiper-button-next, section#category_single .category_details .swiper-button-prev, section#category_single .category_details .swiper-rtl .swiper-button-next, section#category_single .category_details .swiper-rtl .swiper-button-prev{
+    top: 14rem;
+  }
+}

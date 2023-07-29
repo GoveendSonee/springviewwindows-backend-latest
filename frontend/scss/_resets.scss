@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+body, * {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.container {
+    margin: 0 6rem;
+}    
+
+
+.heading_main {
+    text-align: center;
+    padding: 3rem 0 .51rem;
+    color: #4E4E4E;
+    h1{
+        font-weight: 500;
+        font-size: 1.6rem;
+    }
+}
+
+
+// title pages
+section#heading_pages {
+    background: $b2;
+    padding: 1rem 0;
+    .container {
+        display: flex;
+        a {
+            text-decoration: none;
+            margin: auto;
+        }
+        .previous {
+            margin: auto 0;
+            color: #4E4E4E;
+            .icon {
+                display: flex;
+                i.bx.bx-arrow-back {
+                    font-size: 1.52rem;
+                    padding: 0 0.51rem 0 0;
+                }
+                small {
+                    padding: 2px 0 0 0;
+                }
+            }
+        }
+        .topic_page {
+            justify-content: center;
+            text-align: center;
+            display: block;
+            align-items: center;
+            width: -webkit-fill-available;
+            margin: 0 3rem 0 0;
+            h1.head {
+                font-weight: 500;
+                color: #4E4E4E;
+                text-decoration: none;
+                // text-decoration-color: $t1;
+                // text-underline-offset: 0.5rem;
+            }
+        }
+    }
+}
+
+hr.hr_heading {
+    width: 4rem;
+    text-align: center;
+    position: absolute;
+    left: 47%;
+    height: 2px!important;
+    background-color: #79C45F;
+    border: none;
+}
+
+hr.hr_headinggallery {
+    width: 4rem;
+    text-align: center;
+    position: absolute;
+    left: 48.5%;
+    height: 2px!important;
+    background-color: #79C45F;
+    border: none;
+}
+
+//Category Page 
+section#heading_second_pages{
+    padding: 2rem 0 0;
+    .container {
+        a {
+            text-decoration: none;
+            margin: auto;
+        }
+        .previous {
+            margin: auto 0;
+            color: #4E4E4E;
+            .icon {
+                display: flex;
+                i.bx.bx-arrow-back {
+                    font-size: 1.52rem;
+                    padding: 0 0.51rem 0 0;
+                }
+                small {
+                    padding: 2px 0 0 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    section#heading_pages .container .topic_page h1.head {
+        font-weight: 500;
+        color: #4E4E4E;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .heading_main {
+        h1{
+            font-size: 1.3rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 512px) {
+    .heading_main {
+        h1{
+            font-size: 1.2rem;
+        }
+    }
+
+    section#heading_pages .container .topic_page h1.head {
+        font-weight: 500;
+        color: #4E4E4E;
+        font-size: 17px;
+    }
+
+    section#heading_second_pages .container .previous .icon i.bx.bx-arrow-back ,
+    section#heading_pages .container .previous .icon i.bx.bx-arrow-back {
+        font-size: 1.2rem;
+        padding: 2px;
+    }
+
+    section#heading_second_pages .container ,
+    section#heading_pages .container {
+        margin: 0;
+    }
+
+    section#heading_second_pages {
+        padding: 2rem 0 0;
+    }
+
+}
+
+@media only screen and (max-width: 312px) {
+    section#heading_pages .container .topic_page h1.head {
+        font-weight: 500;
+        color: #4E4E4E;
+        font-size: 15px;
+    }
+
+    section#heading_second_pages .container .previous .icon i.bx.bx-arrow-back,
+    section#heading_pages .container .previous .icon i.bx.bx-arrow-back {
+        font-size: 1rem;
+        padding: 4px 0;
+    }
+
+}

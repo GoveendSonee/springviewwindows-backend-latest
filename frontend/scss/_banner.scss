@@ -1,0 +1,222 @@
+// section#banner_ {
+//     margin: 4rem 0 0;
+//     .container_banner {
+//         position: relative;
+//         z-index: 9999;
+//         display: contents;
+//         .content {
+//             position: absolute;
+//             top: 40%;
+//             display: flex;
+//             justify-content: space-between;
+//             .main_ {
+//                 color: #fff;
+//                 width: 54%;
+//                 h1.heading {
+//                     font-size: 2rem;
+//                 }
+//                 p.para {
+//                     padding: 2rem 0 4rem 0;
+//                     font-size: 1rem;
+//                     line-height: 2;
+//                 }
+//                 a{
+//                     text-decoration: none;
+//                     background: $t1;
+//                     color: #fff;
+//                     padding: 12px 50px;
+//                     border-radius: 7px;
+//                 }
+//             }
+//             .form {
+//                 background: #fff;
+//                 border-radius: 10px;
+//                 padding: 2rem;
+//                 color: $t3;
+//                 width: 35%;
+//                 margin: -4rem 0 0;
+//                 .form-group {
+//                     display: grid;
+//                     text-align: initial;
+//                     padding: 1rem 0 0;
+//                     font-size: .8rem;
+//                     .form_re {
+//                         border: none;
+//                         border-bottom: 1px solid;
+//                         padding: 7px 0 0;
+//                     }
+//                     .form_send {
+//                         border: none;
+//                         width: 80%;
+//                         padding: .91rem;
+//                         border-radius: 4px;
+//                         background: $t1;
+//                         color: #fff;
+//                         text-transform: uppercase;
+//                         font-size: .81rem;
+//                     }
+//                 }
+//             }
+//         }
+//         img {
+//             width: 100%;
+//             height: 95vh;
+//             object-fit: cover;
+//         }
+//     }
+// }
+
+// section#banner_band{
+//     .container_band {
+//         position: relative;
+//         color: white;
+
+//         .container.content {
+//             position: absolute;
+//             top: 15%;
+//             display: flex;
+//             justify-content: space-between;
+//             .main_ {
+//                 color: #fff;
+//                 width: 54%;
+//                 h1.heading {
+//                     font-size: 2rem;
+//                 }
+//                 p.para {
+//                     padding: 2rem 0 4rem 0;
+//                     font-size: 1rem;
+//                     line-height: 2;
+//                 }
+//                 a{
+//                     text-decoration: none;
+//                     background: $t1;
+//                     color: #fff;
+//                     padding: 12px 50px;
+//                     border-radius: 7px;
+//                 }
+//             }
+//             .form {
+//                 background: #fff;
+//                 border-radius: 10px;
+//                 padding: 2rem;
+//                 color: $t3;
+//                 width: 30%;
+//                 margin: -4rem 0 0;
+//                 .title {
+//                     font-size: 14px;
+//                 }
+//                 .form-group {
+//                     display: grid;
+//                     text-align: initial;
+//                     padding: 1rem 0 0;
+//                     font-size: .8rem;
+//                     .form_re {
+//                         border: none;
+//                         border-bottom: 1px solid;
+//                         padding: 7px 0 0;
+//                     }
+                   
+//                     .form_send {
+//                         border: none;
+//                         width: 13rem;
+//                         padding: 8px;
+//                         border-radius: 4px;
+//                         background: #79C45F;
+//                         color: #fff;
+//                         text-transform: uppercase;
+//                         font-size: 13px;
+//                     }
+//                 }
+//             }
+//             div#form_align {
+//                 justify-content: center;
+//             }
+//         }
+//     }
+// }
+
+section#banner_width {
+    .banner_cont{
+        position: relative;
+        .img{
+            img {
+                width: 100%;
+                height: 70vh;
+                object-fit: cover;
+                filter: brightness(0.7);
+                background-size: cover;
+            }
+        }
+        .description_banner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0, -50%);
+            display: flex;
+            justify-content: space-between;
+            .main_ {
+                color: #fff;
+                margin: auto 0;
+                width: 50%;
+                h1.heading {
+                    font-size: 1.82rem;
+                }
+                p.para {
+                    padding: 1rem 0 2rem 0;
+                    font-size: 14px;
+                    line-height: 1.9;
+                }
+                a{
+                    text-decoration: none;
+                    background: $t1;
+                    color: #fff;
+                    padding: 12px 50px;
+                    border-radius: 7px;
+                    font-weight: 500;
+                }
+            }
+            .form {
+                background: #fff;
+                border-radius: 10px;
+                padding: 1rem 2rem;
+                color: $t3;
+                // width: 35%;
+                // margin: -4rem 0 0;
+                .title {
+                    font-size: 15px;
+                    font-weight: 400;
+                }
+                .form-group {
+                    display: grid;
+                    text-align: initial;
+                    padding: 1rem 0 0;
+                    font-size: .8rem;
+                    .form_re {
+                        border: none;
+                        border-bottom: .51px solid #00000059;
+                        padding: 7px 0 0;
+                        height: 2rem;
+                        overflow: auto;
+                    }
+                    .form_send {
+                        border: none;
+                        width: 80%;
+                        padding: 6px .91rem;
+                        border-radius: 4px;
+                        background: $t1;
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-size: 12px;
+                    }
+                }
+
+                .form-group.send {
+                    justify-content: center;
+                    button.form_send {
+                        width: 15rem!important;
+                    }
+                }
+            }
+        }
+    }
+}

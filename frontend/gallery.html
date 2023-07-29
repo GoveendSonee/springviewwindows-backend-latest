@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS  -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- END CSS  -->
+
+    <title>Spring View Windows</title>
+  </head>
+  <body>
+
+    <!-- Top Header  -->
+    <section id="top_header">
+      <div class="container">
+        <div class="row">
+          <div class="opening_time">
+            <div class="content">
+              <i class="bx bx-time-five"></i> Showroom Opening Hours: Mon-Fri:
+              10:00 AM to 9:00 PM
+            </div>
+          </div>
+          <div class="phne">
+            <div class="content">
+              <i class="bx bxs-phone"></i> Call us at:
+              <a href="tel:07788996622">07788996622</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Top Header  -->
+
+    <!-- Menu & Header  -->
+    <section id="menu">
+      <div class="container">
+        <header class="header">
+          <div class="header__content">
+            <div class="main_logo">
+              <a href="index.html" class="logo"
+                ><img src="img/logo.png" class="card-img-top" alt=""
+              /></a>
+
+              <nav class="nav">
+                <a href="index.html" class="logo-mobile"
+                  ><img src="img/logo_bar.png" class="card-img-top" alt=""
+                /></a>
+                <div class="timing_menu">
+                  <div class="row">
+                    <div class="opening_time">
+                      <div class="content">
+                        <i class="bx bx-time-five"></i> Showroom Opening Hours:
+                        Mon-Fri: 10:00 AM to 9:00 PM
+                      </div>
+                    </div>
+                    <div class="phne">
+                      <div class="content">
+                        <i class="bx bxs-phone"></i> Call us at:
+                        <a href="tel:07788996622">07788996622</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <ul class="nav__list">
+                  <li class="nav__item">
+                    <a href="alu.html" class="nav__link">ALU</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="alu.html" class="nav__link">PVC</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="glass-constructions.html" class="nav__link">GLASS</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="" class="nav__link">Gallery</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="" class="nav__link">About Company</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="" class="nav__link">To Download</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="" class="nav__link">Contact</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="hamburger">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </header>
+      </div>
+    </section>
+    <!-- Menu & Header  -->
+
+    <!-- Heading  -->
+    <section id="heading_pages">
+        <div class="container">
+            <a href="">
+                <div class="previous">
+                    <div class="icon"><i class='bx bx-arrow-back'></i><small>Back</small></div>
+                </div>
+            </a>
+            <div class="topic_page">
+                <h1 class="head">GALLERY</h1>
+                <hr class="hr_headinggallery">
+            </div>
+        </div>
+    </section>
+    <!-- End Heading  -->
+
+    <!-- Pages  -->
+    <section id="gallery_page">
+        <div class="container">
+          
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'ALU')" id="defaultOpen"><span> ALU </span></button>
+                <button class="tablinks" onclick="openCity(event, 'PVC')"><span> PVC </span></button>
+            </div>
+
+            <style>
+
+                  section#gallery_page .testimonial-column {
+                      cursor: pointer;
+                  }
+
+                  section#gallery_page .testimonial-column .testimonial-name {
+                      cursor: pointer;
+                  }
+
+                  section#gallery_page .testimonial-column .popup-container {
+                      display: none;
+                      position: fixed;
+                      z-index: 999999;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      background-color: rgba(0, 0, 0, 0.8);
+                      overflow: auto;
+                  }
+
+                  section#gallery_page .testimonial-column .popup-content {
+                      color: #fff;
+                      text-align: center;
+                      font-size: 18px;
+                      margin: 20px;
+                  }
+
+                  section#gallery_page .testimonial-column .close-icon {
+                    font-size: 2.2rem;
+                    position: absolute;
+                    top: 7.1rem;
+                    right: 12%;
+                    cursor: pointer;
+                    color: #000;
+                    background-color: #fff;
+                    padding: 0 .81rem;
+                  }
+
+                  section#gallery_page .testimonial-column .gallery-slider {
+                    display: flex;
+                    height: fit-content;
+                    overflow: hidden;
+                    position: relative;
+                    justify-content: center;
+                    align-items: center;
+                    top: 5rem;
+                    padding: 0 10%;
+                  }
+
+                  section#gallery_page .testimonial-column .gallery-image {
+                    width: -webkit-fill-available;
+                    height: 35rem;
+                    background: #fff;
+                    padding: 1rem;
+                    border: 2px solid #7ac45f;
+                    display: none;
+                    flex: 0 0 100%;
+                    opacity: 0;
+                    transition: opacity 0.3s ease-in-out;
+                    object-fit: cover;
+                  }
+
+                  section#gallery_page .testimonial-column .gallery-image.active {
+                      display: block;
+                      opacity: 1;
+                  }
+
+                  section#gallery_page .testimonial-column .prev-icon,
+                  section#gallery_page .testimonial-column .next-icon {
+                      position: absolute;
+                      top: 47%;
+                      transform: translateY(-50%);
+                      font-size: 2rem;
+                      color: #000;
+                      background-color: #fff;
+                      padding: 0 1rem;
+                      cursor: pointer;
+                      z-index: 2;
+                  }
+
+                  section#gallery_page .testimonial-column .prev-icon {
+                    left: 13%;
+                  }
+
+                  section#gallery_page .testimonial-column .next-icon {
+                      right: 13%;
+                  }
+
+                  section#gallery_page .testimonial-column a.download-icon {
+                      z-index: 99999999;
+                      font-size: 2rem;
+                      position: absolute;
+                      right: 7%;
+                      cursor: pointer;
+                      color: #000;
+                      background-color: #fff;
+                      padding: 1rem 1rem;
+                  }
+
+                @media only screen and (max-width: 900px) {
+                  section#gallery_page .testimonial-column .gallery-image{
+                    height: 29rem;
+                  }
+
+                  section#gallery_page .testimonial-column .close-icon {
+                    font-size: 1.7rem;
+                    top: 7.1rem;
+                    right: 14%;
+                }
+
+                }
+
+                @media only screen and (max-width: 750px) {
+                    section#gallery_page .testimonial-column .gallery-image{
+                      height: 22rem;
+                    }
+
+                    section#gallery_page .testimonial-column .close-icon {
+                      font-size: 1.7rem;
+                      top: 7.1rem;
+                      right: 14%;
+                    }
+
+                }
+
+            </style>
+
+            <div id="ALU" class="tabcontent">
+               <div class="gallery_filter_depart">
+                  <div class="container-fluid filterbox">
+                      <div class="filter-tabs">
+                          <div class="resu">Show results for:</div>
+                          <div class="filter-sort">
+                              <div class="navigation">
+                                  <a href="javascript:void(0)" data-filter="all" class="rebutton active">All</a>
+                                  <a href="javascript:void(0)" data-filter="One_family_house" class="rebutton">ONE FAMILY HOUSES</a>
+                                  <a href="javascript:void(0)" data-filter="Residences" class="rebutton">RESIDENCES</a>
+                                  <a href="javascript:void(0)" data-filter="Objects" class="rebutton">OBJECTS</a>
+                                  <a href="javascript:void(0)" data-filter="Fire_Facilities" class="rebutton">FIRE FACILITIES</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="main-wrap wrap-inner">
+                          <div id="content">
+                              <div class="main-full" id="main">
+                                  <ol class="content">
+                                      <li class="team shot-thumbnail Residences">
+                                        <div class="multi-shot testimonial-column" onclick="openPopup(1)">
+                                             <!-- Main Content  -->
+                                              <div class="dribbble-img testimonial-name">
+                                                  <a class="dribbble-link">
+                                                      <picture> 
+                                                          <img decoding="async" alt="images-1" src="img/glass.jpeg">
+                                                      </picture>
+                                                  </a>
+                                                  <a href="#" class="dribbble-title">
+                                                      <p>Walton-in-gordano </p>
+                                                      <p>London</p> 
+                                                  </a>
+                                              </div>  
+                                             <!-- End Main Content  -->
+
+                                             <!-- Pop Up  -->
+                                             <div class="popup-container" id="popup-container-1">
+                                                  <div class="popup-content">
+                                                    <div class="gallery-slider" id="gallery-slider-1">
+                                                        <img src="img/glass.jpeg" alt="Image 1" class="gallery-image active">
+                                                        <img src="img/frontdoor.png" alt="Image 2" class="gallery-image">
+                                                        <!-- Add more images here -->
+                                                    </div>
+
+                                                    <div class="slider-navigation">
+                                                        <span class="prev-icon" onclick="showPreviousImage(1)">&lt;</span>
+                                                        <span class="next-icon" onclick="showNextImage(1)">&gt;</span>
+                                                    </div>
+                                                    <a href="#" class="download-icon" download>
+                                                      ⬇️
+                                                    </a>
+                                                  </div>
+                                                  <span class="close-icon" onclick="closePopupByIcon(event, 1)">&times;</span>
+                                      
+                                              </div>
+                                             <!-- End PopUp  -->
+                                          </div>  
+                                      </li>
+                                      <li class="team shot-thumbnail One_family_house">
+                                        <div class="multi-shot testimonial-column" onclick="openPopup(2)">
+                                          <div class="dribbble-img testimonial-name">
+                                              <a class="dribbble-link">
+                                                  <picture> 
+                                                      <img decoding="async" alt="images-1" src="img/pvc windows.jpg">
+                                                  </picture>
+                                              </a>
+                                              <a href="#" class="dribbble-title">
+                                                  <p>Belloch </p>
+                                                  <p>London</p> 
+                                              </a>
+                                          </div>   
+                                          <!-- Pop Up  -->
+                                          <div class="popup-container" id="popup-container-2">
+                                              <div class="popup-content">
+                                              <div class="gallery-slider" id="gallery-slider-2">
+                                                  <img src="img/pvc-min.png" alt="Image 3" class="gallery-image active">
+                                                  <img src="img/Facade.png" alt="Image 4" class="gallery-image">
+                                                  <!-- Add more images here -->
+                                              </div>
+                                              <div class="slider-navigation">
+                                                  <span class="prev-icon" onclick="showPreviousImage(2)">&lt;</span>
+                                                  <span class="next-icon" onclick="showNextImage(2)">&gt;</span>
+                                              </div>
+                                              </div>
+                                              <span class="close-icon" onclick="closePopupByIcon(event, 2)">&times;</span>
+                                  
+                                          </div>
+                                        <!-- End PopUp  -->
+                                        </div>  
+                                      </li>
+                                      <li class="team shot-thumbnail Residences">
+                                        <div class="multi-shot">  
+                                          <div class="dribbble-img">
+                                              <a class="dribbble-link">
+                                                  <picture> 
+                                                      <img decoding="async" alt="images-1" src="img/pvc terrace.jpg">
+                                                  </picture>
+                                              </a>
+                                              <a href="#" class="dribbble-title">
+                                                  <p>Englishcombe</p>
+                                                  <p>London</p> 
+                                              </a>
+                                          </div>   
+                                      </div>  
+                                      </li>
+                                      <li class="team shot-thumbnail Objects">
+                                        <div class="multi-shot">  
+                                          <div class="dribbble-img">
+                                              <a class="dribbble-link">
+                                                  <picture> 
+                                                      <img decoding="async" alt="images-1" src="img/Terrace.jpeg">
+                                                  </picture>
+                                              </a>
+                                              <a href="#" class="dribbble-title">
+                                                  <p>Englishcombe London</p>
+                                                  <p>London</p> 
+                                              </a>
+                                          </div>   
+                                      </div>   
+                                      </li>
+                                      <li class="team shot-thumbnail Objects">
+                                        <div class="multi-shot">  
+                                          <div class="dribbble-img">
+                                              <a class="dribbble-link">
+                                                  <picture> 
+                                                      <img decoding="async" alt="images-1" src="img/home_33banner.jpg">
+                                                  </picture>
+                                              </a>
+                                              <a href="#" class="dribbble-title">
+                                                  <p>Walton-in-gordano </p>
+                                                  <p>London</p> 
+                                              </a>
+                                          </div>   
+                                      </div>    
+                                      </li>
+                                      <li class="team shot-thumbnail Fire_Facilities">
+                                        <div class="multi-shot">  
+                                          <div class="dribbble-img">
+                                              <a class="dribbble-link">
+                                                  <picture> 
+                                                      <img decoding="async" alt="images-1" src="img/pvc-min.png">
+                                                  </picture>
+                                              </a>
+                                              <a href="#" class="dribbble-title">
+                                                  <p>Belloch</p>
+                                                  <p>London</p> 
+                                              </a>
+                                          </div>   
+                                      </div>  
+                                      </li>
+                                      <li class="team shot-thumbnail Objects">
+                                        <div class="multi-shot">  
+                                          <div class="dribbble-img">
+                                              <a class="dribbble-link">
+                                                  <picture> 
+                                                      <img decoding="async" alt="images-1" src="img/innovation windows.jpeg">
+                                                  </picture>
+                                              </a>
+                                              <a href="#" class="dribbble-title">
+                                                  <p>Walton-in-gordano </p>
+                                                  <p>London</p> 
+                                              </a>
+                                          </div>   
+                                      </div>   
+                                      </li>
+                                      <li class="team shot-thumbnail Residences">
+                                        <div class="multi-shot">  
+                                          <div class="dribbble-img">
+                                              <a class="dribbble-link">
+                                                  <picture> 
+                                                      <img decoding="async" alt="images-1" src="img/innovation spring.jpeg">
+                                                  </picture>
+                                              </a>
+                                              <a href="#" class="dribbble-title">
+                                                  <p>Belloch</p>
+                                                  <p>London</p> 
+                                              </a>
+                                          </div>   
+                                      </div>  
+                                      </li>
+                                      <li class="team shot-thumbnail Fire_Facilities">
+                                        <div class="multi-shot">  
+                                          <div class="dribbble-img">
+                                              <a class="dribbble-link">
+                                                  <picture> 
+                                                      <img decoding="async" alt="images-1" src="img/glass.jpeg">
+                                                  </picture>
+                                              </a>
+                                              <a href="#" class="dribbble-title">
+                                                  <p>Walton-in-gordano </p>
+                                                  <p>London</p> 
+                                              </a>
+                                          </div>   
+                                      </div>  
+                                      </li>
+                                  </ol>
+                              </div>
+                          </div>
+                      </div>
+                  </div> 
+              </div>
+            </div>
+            
+            <div id="PVC" class="tabcontent">
+              <div class="gallery_filter_departtwo">
+                <div class="container-fluid filterbox">
+                    <div class="filter-tabs">
+                        <div class="resu">Show results for:</div>
+                        <div class="filter-sort">
+                            <div class="navigationtwo">
+                                <a href="javascript:void(0)" data-filter="all" class="rebuttontwo active">All</a>
+                                <a href="javascript:void(0)" data-filter="Residences" class="rebuttontwo">RESIDENCES</a>
+                                <a href="javascript:void(0)" data-filter="Fire_Facilities" class="rebuttontwo">FIRE FACILITIES</a>
+                                <a href="javascript:void(0)" data-filter="One_family_house" class="rebuttontwo">ONE FAMILY HOUSES</a>
+                                <a href="javascript:void(0)" data-filter="Objects" class="rebuttontwo">OBJECTS</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-wrap wrap-inner">
+                        <div id="content">
+                            <div class="main-full" id="main">
+                                <ol class="content">
+                                  <li class="team shot-thumbnail Residences">
+                                    <div class="multi-shot testimonial-column" onclick="openPopup(100)">
+                                         <!-- Main Content  -->
+                                          <div class="dribbble-img testimonial-name">
+                                              <a class="dribbble-link">
+                                                  <picture> 
+                                                      <img decoding="async" alt="images-100" src="img/glass.jpeg">
+                                                  </picture>
+                                              </a>
+                                              <a href="#" class="dribbble-title">
+                                                  <p>Walton-in-gordano </p>
+                                                  <p>London</p> 
+                                              </a>
+                                          </div>  
+                                         <!-- End Main Content  -->
+
+                                         <!-- Pop Up  -->
+                                         <div class="popup-container" id="popup-container-100">
+                                              <div class="popup-content">
+                                              <div class="gallery-slider" id="gallery-slider-100">
+                                                  <img src="img/glass.jpeg" alt="Image 100" class="gallery-image active">
+                                                  <img src="img/frontdoor.png" alt="Image 101" class="gallery-image">
+                                                  <!-- Add more images here -->
+                                              </div>
+                                              <div class="slider-navigation">
+                                                  <span class="prev-icon" onclick="showPreviousImage(100)">&lt;</span>
+                                                  <span class="next-icon" onclick="showNextImage(100)">&gt;</span>
+                                              </div>
+                                              </div>
+                                              <span class="close-icon" onclick="closePopupByIcon(event, 100)">&times;</span>
+                                  
+                                          </div>
+                                         <!-- End PopUp  -->
+                                      </div>  
+                                  </li>
+                                  <li class="team shot-thumbnail One_family_house">
+                                    <div class="multi-shot testimonial-column" onclick="openPopup(2)">
+                                      <div class="dribbble-img testimonial-name">
+                                          <a class="dribbble-link">
+                                              <picture> 
+                                                  <img decoding="async" alt="images-1" src="img/pvc windows.jpg">
+                                              </picture>
+                                          </a>
+                                          <a href="#" class="dribbble-title">
+                                              <p>Belloch </p>
+                                              <p>London</p> 
+                                          </a>
+                                      </div>   
+                                      <!-- Pop Up  -->
+                                      <div class="popup-container" id="popup-container-2">
+                                          <div class="popup-content">
+                                          <div class="gallery-slider" id="gallery-slider-2">
+                                              <img src="img/pvc-min.png" alt="Image 3" class="gallery-image active">
+                                              <img src="img/Facade.png" alt="Image 4" class="gallery-image">
+                                              <!-- Add more images here -->
+                                          </div>
+                                          <div class="slider-navigation">
+                                              <span class="prev-icon" onclick="showPreviousImage(2)">&lt;</span>
+                                              <span class="next-icon" onclick="showNextImage(2)">&gt;</span>
+                                          </div>
+                                          </div>
+                                          <span class="close-icon" onclick="closePopupByIcon(event, 2)">&times;</span>
+                              
+                                      </div>
+                                    <!-- End PopUp  -->
+                                    </div>  
+                                  </li>
+                                    <li class="team shot-thumbnailtwo Objects">
+                                      <div class="multi-shot">  
+                                        <div class="dribbble-img">
+                                            <a class="dribbble-link">
+                                                <picture> 
+                                                    <img decoding="async" alt="images-1" src="img/Terrace.jpeg">
+                                                </picture>
+                                            </a>
+                                            <a href="#" class="dribbble-title">
+                                                <p>Englishcombe London</p>
+                                                <p>London</p> 
+                                            </a>
+                                        </div>   
+                                    </div>   
+                                    </li>
+                                    <li class="team shot-thumbnailtwo Objects">
+                                      <div class="multi-shot">  
+                                        <div class="dribbble-img">
+                                            <a class="dribbble-link">
+                                                <picture> 
+                                                    <img decoding="async" alt="images-1" src="img/home_33banner.jpg">
+                                                </picture>
+                                            </a>
+                                            <a href="#" class="dribbble-title">
+                                                <p>Walton-in-gordano </p>
+                                                <p>London</p> 
+                                            </a>
+                                        </div>   
+                                    </div>    
+                                    </li>
+                                    <li class="team shot-thumbnailtwo Objects">
+                                      <div class="multi-shot">  
+                                        <div class="dribbble-img">
+                                            <a class="dribbble-link">
+                                                <picture> 
+                                                    <img decoding="async" alt="images-1" src="img/innovation windows.jpeg">
+                                                </picture>
+                                            </a>
+                                            <a href="#" class="dribbble-title">
+                                                <p>Walton-in-gordano </p>
+                                                <p>London</p> 
+                                            </a>
+                                        </div>   
+                                    </div>   
+                                    </li>
+                                    <li class="team shot-thumbnailtwo Residences">
+                                      <div class="multi-shot">  
+                                        <div class="dribbble-img">
+                                            <a class="dribbble-link">
+                                                <picture> 
+                                                    <img decoding="async" alt="images-1" src="img/pvc terrace.jpg">
+                                                </picture>
+                                            </a>
+                                            <a href="#" class="dribbble-title">
+                                                <p>Englishcombe</p>
+                                                <p>London</p> 
+                                            </a>
+                                        </div>   
+                                    </div>  
+                                    </li>
+                                    <li class="team shot-thumbnailtwo Fire_Facilities">
+                                      <div class="multi-shot">  
+                                        <div class="dribbble-img">
+                                            <a class="dribbble-link">
+                                                <picture> 
+                                                    <img decoding="async" alt="images-1" src="img/pvc-min.png">
+                                                </picture>
+                                            </a>
+                                            <a href="#" class="dribbble-title">
+                                                <p>Belloch</p>
+                                                <p>London</p> 
+                                            </a>
+                                        </div>   
+                                    </div>  
+                                    </li>
+                                    <li class="team shot-thumbnailtwo Fire_Facilities">
+                                      <div class="multi-shot">  
+                                        <div class="dribbble-img">
+                                            <a class="dribbble-link">
+                                                <picture> 
+                                                    <img decoding="async" alt="images-1" src="img/glass.jpeg">
+                                                </picture>
+                                            </a>
+                                            <a href="#" class="dribbble-title">
+                                                <p>Walton-in-gordano </p>
+                                                <p>London</p> 
+                                            </a>
+                                        </div>   
+                                    </div>  
+                                    </li>
+                                    <li class="team shot-thumbnailtwo Residences">
+                                      <div class="multi-shot">  
+                                        <div class="dribbble-img">
+                                            <a class="dribbble-link">
+                                                <picture> 
+                                                    <img decoding="async" alt="images-1" src="img/innovation spring.jpeg">
+                                                </picture>
+                                            </a>
+                                            <a href="#" class="dribbble-title">
+                                                <p>Belloch</p>
+                                                <p>London</p> 
+                                            </a>
+                                        </div>   
+                                    </div>  
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+              </div>
+            </div>
+
+            <script>
+              function openPopup(index) {
+                var popupContainer = document.getElementById("popup-container-" + index);
+                popupContainer.style.display = "block";
+              }
+            
+              function closePopup(index) {
+                var popupContainer = document.getElementById("popup-container-" + index);
+                popupContainer.style.display = "none";
+              }
+            
+              function showNextImage(index) {
+                var gallerySlider = document.getElementById("gallery-slider-" + index);
+                var activeImage = gallerySlider.querySelector(".gallery-image.active");
+                var nextImage = activeImage.nextElementSibling;
+            
+                if (!nextImage) {
+                  // If there is no next image, select the first image
+                  nextImage = gallerySlider.querySelector(".gallery-image:first-child");
+                }
+            
+                activeImage.classList.remove("active");
+                nextImage.classList.add("active");
+              }
+            
+              function showPreviousImage(index) {
+                var gallerySlider = document.getElementById("gallery-slider-" + index);
+                var activeImage = gallerySlider.querySelector(".gallery-image.active");
+                var previousImage = activeImage.previousElementSibling;
+            
+                if (!previousImage) {
+                  // If there is no previous image, select the last image
+                  previousImage = gallerySlider.querySelector(".gallery-image:last-child");
+                }
+            
+                activeImage.classList.remove("active");
+                previousImage.classList.add("active");
+              }
+            
+              function closePopupByIcon(event, index) {
+                event.stopPropagation();
+                closePopup(index);
+              }
+
+              function downloadImage() {
+                const activeImage = document.querySelector('.gallery-slider .gallery-image.active');
+                const imageUrl = activeImage.getAttribute('src');
+
+                // Create a temporary anchor element
+                const downloadLink = document.createElement('a');
+                downloadLink.href = imageUrl;
+                downloadLink.setAttribute('download', 'image.jpg');
+                downloadLink.target = '_blank';
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+              }
+
+            </script>
+            
+        </div>
+    </section>
+    <!-- End Pages  -->
+
+    <!-- Footer  -->
+    <footer id="footer_section">
+      <div class="container">
+        <div class="menu_footer">
+          <div class="first_row">
+            <div class="list">
+              <h3 class="heading">General</h3>
+              <ul class="whole">
+                <li class="part"><a href="">ALU</a></li>
+                <li class="part"><a href="">PVC</a></li>
+                <li class="part"><a href="">GLASS</a></li>
+                <li class="part"><a href="">Gallery</a></li>
+                <li class="part"><a href="">About Company</a></li>
+                <li class="part"><a href="">To Download</a></li>
+                <li class="part"><a href="">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="first_two_row">
+            <div class="list">
+              <h3 class="heading">Policy</h3>
+              <ul class="whole">
+                <li class="part"><a href="">Company Policy</a></li>
+                <li class="part"><a href="">Privacy and Cookies</a></li>
+                <li class="part"><a href="">Services</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="second_blank"></div>
+          <div class="second_row">
+            <h3 class="heading">Contact Us</h3>
+            <p class="paragraph">
+              Ravensdale Industrial Estate, Unit 9, Timberwharf Rd, London N16 6DB, United Kingdom
+            </p>
+            <div class="phone">
+              Phone: <a href="tel:+442088023839">+44 20 8802 3839</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="copyright">
+      <p>© Copyright 2023 Springview Windows Ltd</p>
+    </div>
+    <!-- End Footer  -->
+
+    <!-- JS  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script  src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
+    <script src="js/main.js"></script>
+    <!-- END JS  -->
+  </body>
+</html>

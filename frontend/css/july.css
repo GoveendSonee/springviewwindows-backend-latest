@@ -1,0 +1,153 @@
+section#about_history_spring  {
+    background: rgb(249, 249, 249);
+}
+
+section#about_history_spring .swiper-wrapper img {
+    height: 13rem;
+    border: 1px solid #A6A6A64D;
+    border-radius: 8px;
+    opacity: 1;
+    width: -webkit-fill-available;
+    padding: 0.51rem;
+    margin: 6rem 1rem 0rem;
+}
+
+section#about_history_spring .quality_product h2.title{
+    letter-spacing: 0px;
+    color: #4e4e4e;
+    opacity: 1;
+    text-align: center;
+    font-weight: 500;
+}
+
+section#about_history_spring p.past{
+    display: none;
+}
+
+section#about_history_spring .content {
+    text-align: center;
+    padding: 0 1rem;
+}
+
+section#about_history_spring .content h2 {
+    color: #4E4E4E;
+    font-weight: 500;
+    font-size: 15px;
+    height: 3rem;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+
+section#about_history_spring .swiper.progress_bar {
+    padding: 2rem 2rem 2rem;
+}
+
+section#about_history_spring .swiper.progress_bar .dot {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    right: 46%;
+    background-color: #fff;
+    border: 2px solid #79c45f;
+    border-radius: 50%;
+    z-index: 99999;
+    margin: 1rem 5px;
+}
+
+section#about_history_spring .swiper.progress_bar .for_year {
+    padding: 21px 0;
+}
+
+section#about_history_spring .swiper.progress_bar .for_year h2.title {
+    padding: 2rem 0 0;
+}
+
+section#about_history_spring .swiper.progress_bar .for_year hr.header_spring {
+    border-top: 2px solid #79c45f; 
+    font-weight: bold;
+}
+
+section#about_history_spring .swiper-button-prev, section#about_history_spring .swiper-rtl .swiper-button-next ,
+section#about_history_spring .swiper-button-next, section#about_history_spring .swiper-rtl .swiper-button-prev {
+    color: #272727;
+    margin: -4rem 0;
+}
+
+section#about_history_spring .swiper-button-prev:after, section#about_history_spring .swiper-rtl .swiper-button-next:after ,
+section#about_history_spring .swiper-button-next:after, section#about_history_spring .swiper-rtl .swiper-button-prev:after {
+    font-size: 25px;
+}
+
+section#about_history_spring .content .pp {
+    height: 21rem;
+}
+
+/* On click 
+ */
+
+ section#about_history_spring .swiper.progress_bar .swiper-slide.containerdp.clicked  .dot {
+    width: 13px;
+    height: 13px;
+    background-color: #79c45f;
+}
+
+section#about_history_spring .swiper.progress_bar .swiper-slide.containerdp.clicked .content h2 {
+    color: #fff;
+    background-color: #79c45f;
+    margin: 0 30%;
+    font-size: 1.32rem;
+    border-radius: 0.5rem;
+}
+
+section#about_history_spring .swiper.progress_bar .swiper-slide.containerdp.clicked .content .pp  img {
+    height: 9rem;
+    border: 0px solid #A6A6A64D;
+    opacity: 1;
+    width: -webkit-fill-available;
+    margin: 0;
+    border-radius: 16px;
+}
+
+section#about_history_spring .swiper.progress_bar .swiper-slide.containerdp.clicked .content .pp  p.past {
+    display: block;
+    font-size: 14px;
+    text-align: initial;
+    background: #E7FFDF;
+    padding: 2rem 1rem 1rem;
+    margin: -3rem 0 0;
+    color: #4E4E4E;
+    box-shadow: 6px 7px 4px 0px #362f2f1f;
+}
+
+section#about_history_spring .swiper.progress_bar .swiper-slide.containerdp.clicked .content .pp .redd {
+    background: #e7ffdf;
+    padding: 0.31rem 1.35rem 1rem;
+    box-shadow: 6px 0px 4px 0px #362f2f1f;
+}
+
+section#about_history_spring .swiper.progress_bar .swiper-slide.containerdp.clicked .content .pp {
+    transition: all ease-in-out 3s;
+}
+
+@media only screen and (max-width: 992px) {
+    section#about_history_spring .swiper.progress_bar .swiper-slide.containerdp.clicked .content .pp p.past{
+        font-size: 13px;
+    }
+    section#about_history_spring .swiper.progress_bar .swiper-slide.containerdp.clicked .content .pp img {
+        height: 8rem;
+    }
+
+    section#about_history_spring .content {
+        padding: 0 0rem;
+    }
+
+    section#about_history_spring .swiper.progress_bar .swiper-slide.containerdp.clicked .content .pp img {
+        margin: 8px 0;
+    }
+
+}
+

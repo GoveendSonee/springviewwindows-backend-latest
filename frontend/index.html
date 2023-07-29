@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS  -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/julysix.css" />
+    <!-- END CSS  -->
+
+    <title>Spring View Windows</title>
+  </head>
+  <body>
+
+    <!-- Top Header  -->
+    <section id="top_header">
+      <div class="container">
+        <div class="row">
+          <div class="opening_time">
+            <div class="content">
+              <i class="bx bx-time-five"></i> Showroom Opening Hours: Mon-Fri:
+              10:00 AM to 9:00 PM
+            </div>
+          </div>
+          <div class="phne">
+            <div class="content">
+              <i class="bx bxs-phone"></i> Call us at:
+              <a href="tel:07788996622">07788996622</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Top Header  -->
+
+    <!-- Menu & Header  -->
+    <section id="menu">
+      <div class="container">
+        <header class="header">
+          <div class="header__content">
+            <div class="main_logo">
+              <a href="index.html" class="logo"
+                ><img src="img/logo.png" class="card-img-top" alt=""
+              /></a>
+
+              <nav class="nav">
+                <a href="index.html" class="logo-mobile"
+                  ><img src="img/logo_bar.png" class="card-img-top" alt=""
+                /></a>
+                <div class="timing_menu">
+                  <div class="row">
+                    <div class="opening_time">
+                      <div class="content">
+                        <i class="bx bx-time-five"></i> Showroom Opening Hours:
+                        Mon-Fri: 10:00 AM to 9:00 PM
+                      </div>
+                    </div>
+                    <div class="phne">
+                      <div class="content">
+                        <i class="bx bxs-phone"></i> Call us at:
+                        <a href="tel:07788996622">07788996622</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <ul class="nav__list">
+                  <li class="nav__item">
+                    <a href="alu.html" class="nav__link">ALU</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="alu.html" class="nav__link">PVC</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="glass-constructions.html" class="nav__link">GLASS</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="" class="nav__link">Gallery</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="" class="nav__link">About Company</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="" class="nav__link">To Download</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="" class="nav__link">Contact</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="hamburger">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </header>
+      </div>
+    </section>
+    <!-- Menu & Header  -->
+
+    <!-- Banner  -->
+    <section id="banner_width">
+      <div class="banner_cont">
+        <div class="img">
+          <img src="img/home_banner.jpg" alt="">
+        </div>
+        <div class="description_banner container">
+          <div class="main_">
+            <h1 class="heading">Lorem ipsum</h1>
+            <p class="para">
+              Lorem ipsum dolor sit amet. Et similique corporis in cupiditate
+              molestias ab illum voluptatem veniam velit. Ut necessitatibus
+              natus qui eaque quidem et quaerat autem. Ut omnis possimus atque
+              soluta eum velit nisi quo odio corrupti ut sint quos in optio
+              ipsam sed sequi internos. Quo expedita expedita et quisquam
+              consequuntur ea adipisci animi aut asperiores dolorem et officia
+              dolorum in similique repellendus.
+            </p>
+            <a href="" class="button">View More</a>
+          </div>
+          <div class="form">
+            <div class="title">Enquire about our Installation Services</div>
+            <form action="submit-form.php" method="post">
+              <div class="form-group">
+                <label for="full-name">Your Name:</label>
+                <input
+                  class="form_re"
+                  type="text"
+                  id="full-name"
+                  name="full-name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input
+                  class="form_re"
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input
+                  class="form_re"
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="post-code">Post Code/Area:</label>
+                <input
+                  class="form_re"
+                  type="text"
+                  id="post-code"
+                  name="post-code"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Your Message:</label>
+                <textarea
+                  class="form_re"
+                  id="message"
+                  name="message"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Upload File</label>
+                <input type="file" name="fileToUpload" id="fileToUpload">
+              </div>
+
+              <div class="form-group send" id="form_align">
+                <button class="form_send" type="submit">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Banner  -->
+
+    <section id="homapgethirdcard">
+      <div class="container">
+        <div class="card_third">
+          <div class="first">
+            <img src="img/frontdoor.png" alt="">
+            <h4 class="titple">For Home</h4>
+            <div class="para">
+              When selecting window and door joinery for your house, it's very essential to consider the manufacturer's expertise, product quality, innovative construction solutions, and the service guarantee. At our company, we provide a wide range of joinery options that cater to every type of building, ensuring a perfect fit for your specific needs.
+            </div>
+            <span class="acti">
+              <a href="http://">See More</a>
+              <i class='bx bx-chevron-right'></i>
+            </span>  
+          </div>
+          <div class="first">
+            <img src="img/pvc mini.png" alt="">
+            <h4 class="titple">For Home</h4>
+            <div class="para">
+              When selecting window and door joinery for your house, it's very essential to consider the manufacturer's expertise, product quality, innovative construction solutions, and the service guarantee. At our company, we provide a wide range of joinery options that cater to every type of building, ensuring a perfect fit for your specific needs.
+            </div>
+            <span class="acti">
+              <a href="http://">See More</a>
+              <i class='bx bx-chevron-right'></i>
+            </span>  
+          </div>
+          <div class="first">
+            <img src="img/pvc terrace.jpg" alt="">
+            <h4 class="titple">For Home</h4>
+            <div class="para">
+              When selecting window and door joinery for your house, it's very essential to consider the manufacturer's expertise, product quality, innovative construction solutions, and the service guarantee. At our company, we provide a wide range of joinery options that cater to every type of building, ensuring a perfect fit for your specific needs.
+            </div>
+            <span class="acti">
+              <a href="http://">See More</a>
+              <i class='bx bx-chevron-right'></i>
+            </span>  
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Offer Section  -->
+    <section id="offer_part" style="margin: -1rem 0 0;">
+      <div class="heading_main">
+        <h1>Our Services For You</h1>
+      </div>
+      <div class="hero">
+
+        <nav class="nav_class">
+          <ul>
+            <li><a href="#alu" class="underline-effect">ALU</a></li>
+            <li><a href="#pvc" class="underline-effect">PVC</a></li>
+            <li><a href="#innovations" class="underline-effect">INNOVATIONS</a></li>
+            <li><a href="#glass_constructions" class="underline-effect">GLASS CONSTRUCTIONS</a></li>
+          </ul>
+        </nav>
+        
+        <section id="alu" class="alu_oofer">
+          <div class="image_offer">
+            <div class="imag_on">
+              <img src="img/alu.png" alt="">
+            </div>
+            <div class="details">
+              <div class="content_windows">
+                <div class="main_title">
+                  <div class="logo">
+                    <div class="svg">
+                      <svg style="color: #4E4E4E!important;" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Glassdoor</title><path d="M17.144 20.572H3.43C3.43 22.465 4.963 24 6.856 24h10.286c1.893 0 3.428-1.535 3.428-3.428V6.492c0-.07-.054-.125-.124-.125h-3.18c-.067 0-.123.056-.123.126v14.08zm0-20.572c1.892 0 3.427 1.535 3.427 3.43H6.858v14.078c0 .068-.056.125-.125.125H3.554c-.07 0-.125-.057-.125-.125V3.428C3.43 1.536 4.963 0 6.856 0h10.287" fill="#444444"></path></svg>
+                    </div>
+                    <h1 class="view">ALU</h1>
+                  </div>
+                  <p class="cont">SpringView - a view without borders</p>
+                </div>
+                <div class="description">
+                  <div class="pointing_view">
+                    <img src="img/windos.jpeg" alt="" class="image_view">
+                    <p class="views"><a href="">Windows</a></p>
+                  </div>
+                  <div class="pointing_view">
+                    <img src="img/Terrace.jpeg" alt="" class="image_view">
+                    <p class="views"><a href="">Terrace Systems</a></p>
+                  </div>
+                  <div class="pointing_view">
+                    <img src="img/Facade.png" alt="" class="image_view">
+                    <p class="views"><a href="">Facade Systems</a></p>
+                  </div>
+                  <div class="pointing_view">
+                    <img src="img/frontdoor.png" alt="" class="image_view">
+                    <p class="views"><a href="">Front Door</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section id="pvc">
+          <div class="image_offer second">
+            <div class="details">
+              <div class="content_windows">
+                <div class="main_title">
+                  <div class="logo">
+                    <div class="svg">
+                      <svg style="color: #4E4E4E!important;" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Glassdoor</title><path d="M17.144 20.572H3.43C3.43 22.465 4.963 24 6.856 24h10.286c1.893 0 3.428-1.535 3.428-3.428V6.492c0-.07-.054-.125-.124-.125h-3.18c-.067 0-.123.056-.123.126v14.08zm0-20.572c1.892 0 3.427 1.535 3.427 3.43H6.858v14.078c0 .068-.056.125-.125.125H3.554c-.07 0-.125-.057-.125-.125V3.428C3.43 1.536 4.963 0 6.856 0h10.287" fill="#444444"></path></svg>
+                    </div>
+                    <h1 class="view">PVC</h1>
+                  </div>
+                  <p class="cont">SpringView - a view without borders</p>
+                </div>
+                <div class="description">
+                  <div class="pointing_view">
+                    <img src="img/pvc windows.jpg" alt="" class="image_view">
+                    <p class="views">Windows</p>
+                  </div>
+                  <div class="pointing_view">
+                    <img src="img/pvc terrace.jpg" alt="" class="image_view">
+                    <p class="views">Terrace Windows</p>
+                  </div>
+                  <div class="pointing_view">
+                    <img src="img/pvc frontdoor.jpg" alt="" class="image_view">
+                    <p class="views">Front Door</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="imag_on">
+              <img src="img/pvc mini.png" alt="">
+            </div>
+          </div>
+        </section>
+        
+        <section id="innovations">
+          <div class="image_offer">
+            <div class="details">
+              <div class="content_windows">
+                <div class="main_title">
+                  <div class="logo">
+                    <div class="svg">
+                      <svg style="color: #4E4E4E!important;" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Glassdoor</title><path d="M17.144 20.572H3.43C3.43 22.465 4.963 24 6.856 24h10.286c1.893 0 3.428-1.535 3.428-3.428V6.492c0-.07-.054-.125-.124-.125h-3.18c-.067 0-.123.056-.123.126v14.08zm0-20.572c1.892 0 3.427 1.535 3.427 3.43H6.858v14.078c0 .068-.056.125-.125.125H3.554c-.07 0-.125-.057-.125-.125V3.428C3.43 1.536 4.963 0 6.856 0h10.287" fill="#444444"></path></svg>
+                    </div>
+                    <h1 class="view">INNOVATIONS</h1>
+                  </div>
+                  <p class="cont">SpringView - a view without borders</p>
+                </div>
+                <div class="description">
+                  <div class="pointing_view">
+                    <img src="img/innovation windows.jpeg" alt="" class="image_view">
+                    <p class="views">Spring Windows</p>
+                  </div>
+                  <div class="pointing_view">
+                    <img src="img/innovation thermally.jpeg" alt="" class="image_view">
+                    <p class="views">Thermally Insulated Windows</p>
+                  </div>
+                  <div class="pointing_view">
+                    <img src="img/innovatino spectral.jpeg" alt="" class="image_view">
+                    <p class="views">Spectral Line</p>
+                  </div>
+                  <div class="pointing_view">
+                    <img src="img/innovation spring.jpeg" alt="" class="image_view">
+                    <p class="views">SpringSafe</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="imag_on">
+              <img src="img/innovations.jpeg" alt="">
+            </div>
+          </div>
+        </section>
+        
+        <section id="glass_constructions">
+          <div class="image_offer second glasss__">
+            <div class="imag_on">
+              <img src="img/glass.jpeg" alt="">
+            </div>
+            <div class="details">
+              <div class="content_windows">
+                <div class="main_title">
+                  <div class="logo">
+                    <div class="svg">
+                      <svg style="color: #4E4E4E!important;" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Glassdoor</title><path d="M17.144 20.572H3.43C3.43 22.465 4.963 24 6.856 24h10.286c1.893 0 3.428-1.535 3.428-3.428V6.492c0-.07-.054-.125-.124-.125h-3.18c-.067 0-.123.056-.123.126v14.08zm0-20.572c1.892 0 3.427 1.535 3.427 3.43H6.858v14.078c0 .068-.056.125-.125.125H3.554c-.07 0-.125-.057-.125-.125V3.428C3.43 1.536 4.963 0 6.856 0h10.287" fill="#444444"></path></svg>
+                    </div>
+                    <h1 class="view">GLASS CONSTRUCTIONS</h1>
+                  </div>
+                  <p class="cont">AmberView - a view without borders</p>
+                </div>
+                <div class="description third">
+                  <div class="pointing_view">
+                    <img src="img/7 cropped.png" alt="" class="image_view">
+                    <p class="views">Frameless Designs</p>
+                  </div>
+                  <div class="pointing_view">
+                    <img src="img/3 cropped.png" alt="" class="image_view">
+                    <p class="views">Large Glazing Units</p>
+                  </div>
+                  <div class="pointing_view">
+                    <img src="img/6 cropped.png" alt="" class="image_view">
+                    <p class="views">Sophisticated and Subtle</p>
+                  </div>
+                  <div class="pointing_view">
+                    <img src="img/4 cropped.png" alt="" class="image_view">
+                    <p class="views">Anti-Pinch Option</p>
+                  </div>
+                  <div class="pointing_view">
+                    <img src="img/shape.png" alt="" class="image_view">
+                    <p class="views">Variety of Shape & Structure</p>
+                  </div>
+                  <div class="pointing_view">
+                    <img src="img/2 cropped.png" alt="" class="image_view">
+                    <p class="views">Hidden Fitting</p>
+                  </div>
+                </div>
+                <div class="offer_includes">
+                  <h4>Our Offer Includes:</h4>
+                  <ol class="lisat">
+                    <li class="lisat">Classic glass doors (Interior)</li>
+                    <li class="lisat">Glass swing doors (Interior)</li>
+                    <li class="lisat">Sliding glass doors (Exterior)</li>
+                    <li class="lisat">Revolving glass doors (Exterior)</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+    </section>
+    <!-- End Offer Section  -->
+
+    <!-- Google Reviews  -->
+    <section id="google">
+      <div class="container">
+        <div class="heading_main">
+          <h1>Google Reviews</h1>
+        </div>
+        <div class="reviews_part">
+          <div class="swiper mySwiper_springview">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="comment">
+                    <img src="img/google.jpg" alt="">
+                    <p class="title">Ms. Reema,</p>
+                    <span class="date">Jan 23, 2023</span>
+                    <div class="stat">
+                      <svg style="color: #EFD944; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="EFD944"></path> </svg>
+                      <svg style="color: #EFD944; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="EFD944"></path> </svg>
+                      <svg style="color: #EFD944; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="EFD944"></path> </svg>
+                      <svg style="color: #EFD944; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="EFD944"></path> </svg>
+                      <svg style="color: #EFD944; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="EFD944"></path> </svg>
+                    </div>
+                    <p class="para">Lorem ipsum dolor sit amet. Et similique corporis in cupiditate molestias ab illum voluptatem veniam velit cupiditate molestias ab illum voluptatem veniam velit cupiditate molestias ab illum voluptatem veniam velit.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="comment">
+                    <img src="img/google.jpg" alt="">
+                    <p class="title">Mr. Rohan,</p>
+                    <span class="date">Jan 23, 2023</span>
+                    <div class="stat">
+                      <svg style="color: #EFD944; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="EFD944"></path> </svg>
+                      <svg style="color: #EFD944; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="EFD944"></path> </svg>
+                      <svg style="color: #EFD944; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="EFD944"></path> </svg>
+                      <svg style="color: #EFD944; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="EFD944"></path> </svg>
+                      <svg style="color: #EFD944; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="EFD944"></path> </svg>
+                    </div>
+                    <p class="para">Lorem ipsum dolor sit amet. Et similique corporis in cupiditate molestias ab illum voluptatem veniam velit cupiditate molestias ab illum voluptatem veniam velit cupiditate molestias ab illum voluptatem veniam velit.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="comment">
+                    <img src="img/google.jpg" alt="">
+                    <p class="title">Ms. Riya,</p>
+                    <span class="date">Jan 23, 2023</span>
+                    <div class="stat">
+                      <svg style="color: #EFD944; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="EFD944"></path> </svg>
+                      <svg style="color: #EFD944; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="EFD944"></path> </svg>
+                      <svg style="color: #EFD944; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="EFD944"></path> </svg>
+                      <svg style="color: #EFD944; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="EFD944"></path> </svg>
+                      <svg style="color: #EFD944; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="EFD944"></path> </svg>
+                    </div>
+                    <p class="para">Lorem ipsum dolor sit amet. Et similique corporis in cupiditate molestias ab illum voluptatem veniam velit cupiditate molestias ab illum voluptatem veniam velit cupiditate molestias ab illum voluptatem veniam velit.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="comment">
+                    <img src="img/google.jpg" alt="">
+                    <p class="title">Ms. Roy,</p>
+                    <span class="date">Jan 23, 2023</span>
+                    <div class="stat">
+                      <svg style="color: #EFD944; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="EFD944"></path> </svg>
+                      <svg style="color: #EFD944; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="EFD944"></path> </svg>
+                      <svg style="color: #EFD944; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="EFD944"></path> </svg>
+                      <svg style="color: #EFD944; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="EFD944"></path> </svg>
+                      <svg style="color: #EFD944; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="EFD944"></path> </svg>
+                    </div>
+                    <p class="para">Lorem ipsum dolor sit amet. Et similique corporis in cupiditate molestias ab illum voluptatem veniam velit cupiditate molestias ab illum voluptatem veniam velit cupiditate molestias ab illum voluptatem veniam velit.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="comment">
+                    <img src="img/google.jpg" alt="">
+                    <p class="title">Ms. Seema,</p>
+                    <span class="date">Jan 23, 2023</span>
+                    <div class="stat">
+                      <svg style="color: #EFD944; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="EFD944"></path> </svg>
+                      <svg style="color: #EFD944; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="EFD944"></path> </svg>
+                      <svg style="color: #EFD944; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="EFD944"></path> </svg>
+                      <svg style="color: #EFD944; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="EFD944"></path> </svg>
+                      <svg style="color: #EFD944; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="EFD944"></path> </svg>
+                    </div>
+                    <p class="para">Lorem ipsum dolor sit amet. Et similique corporis in cupiditate molestias ab illum voluptatem veniam velit cupiditate molestias ab illum voluptatem veniam velit cupiditate molestias ab illum voluptatem veniam velit.</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Google Reviews  -->
+    
+    <!-- Recent Installation -->
+    <section id="recent_install">
+      <div class="container">
+        <div class="heading_main">
+          <h1>A Few of Our Most Recent Installs</h1>
+        </div>
+        <div class="details">
+            <!-- Swiper -->
+            <div class="swiper mySwiper_exaltare">
+              <div class="swiper-wrapper image-container">
+                  <div class="swiper-slide">
+                      <div class="slide_content">
+                          <img src="img/windos.jpeg" alt="" class="popup-trigger">
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slide_content">
+                        <img src="img/glass.jpeg" alt="" class="popup-trigger">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slide_content">
+                        <img src="img/pvc.jpeg" alt="" class="popup-trigger">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slide_content">
+                        <img src="img/innovation spring.jpeg" alt="" class="popup-trigger">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slide_content">
+                        <img src="img/innovation windows.jpeg" alt="" class="popup-trigger">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slide_content">
+                        <img src="img/Terrace.jpeg" alt="" class="popup-trigger">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slide_content">
+                        <img src="img/pvc frontdoor.jpg" alt="" class="popup-trigger">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slide_content">
+                        <img src="img/Facade.png" alt="" class="popup-trigger">
+                    </div>
+                  </div>
+              </div>
+              <div class="popup-overlay">
+                <div class="popup-content">
+                  <img src="" alt="Popup Image" class="popup-image">
+                  <span class="popup-close">&times;</span>
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <script>
+          const popupTriggers = document.querySelectorAll('.popup-trigger');
+          const popupOverlay = document.querySelector('.popup-overlay');
+          const popupImage = document.querySelector('.popup-image');
+          const popupClose = document.querySelector('.popup-close');
+
+          popupTriggers.forEach((trigger) => {
+            trigger.addEventListener('click', () => {
+              const imageSrc = trigger.getAttribute('src');
+              popupImage.setAttribute('src', imageSrc);
+              popupOverlay.style.display = 'block';
+            });
+          });
+
+          popupClose.addEventListener('click', () => {
+            popupOverlay.style.display = 'none';
+          });
+        </script>
+      </div>
+    </section>
+    <!-- End Recent Installation -->
+    
+    <!-- Quality  -->
+    <section id="quality">
+      <div class="container">
+        <div class="heading_main">
+          <h1>We are Known For</h1>
+        </div>
+        <div class="list_out_del">
+            <span><img class="image" src="img/why/1.png" alt="">Great Aesthetics</span>
+            <span><img class="image" src="img/why/2.png" alt="">High Performance</span>
+            <span><img class="image" src="img/why/3.png" alt="">Environment Friendly</span>
+            <span><img class="image" src="img/why/4.png" alt="">Best Quality</span>
+            <span><img class="image" src="img/why/5.png" alt="">Affordability</span>
+        </div>
+      </div>
+    </section>
+    <!-- End Quality  -->
+
+    <!-- Quality Products  -->
+    <section id="quality_products">
+      <div class="container">
+        <div class="heading_main">
+          <h1>Our Quality Products</h1>
+          <br>
+          <small class="content">We only work with the best suppliers to ensure your home enjoys beautiful aesthetics and high levels of performance. From reliable uPVC windows to ultramodern aluminium doors, we can transform your home. Whatever your budget, we have the right solutions to make your home the best it can be.</small>
+        </div>
+        <div class="products_details">
+          <img src="img/products/1.png" alt="">
+          <img src="img/products/2.png" alt="">
+          <img src="img/products/3.png" alt="">
+          <img src="img/products/4.png" alt="">
+          <img src="img/products/5.png" alt="">
+          <img src="img/products/6.png" alt="">
+          <img src="img/products/7.png" alt="">
+          <img src="img/products/8.png" alt="">
+        </div>
+      </div>
+    </section>
+    <!-- End Quality Products  -->
+
+    <section id="gapping" style="margin: 3rem;"></section>
+
+    <!-- Footer  -->
+    <footer id="footer_section">
+      <div class="container">
+        <div class="menu_footer">
+          <div class="first_row">
+            <div class="list">
+              <h3 class="heading">General</h3>
+              <ul class="whole">
+                <li class="part"><a href="">ALU</a></li>
+                <li class="part"><a href="">PVC</a></li>
+                <li class="part"><a href="">GLASS</a></li>
+                <li class="part"><a href="">Gallery</a></li>
+                <li class="part"><a href="">About Company</a></li>
+                <li class="part"><a href="">To Download</a></li>
+                <li class="part"><a href="">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="first_two_row">
+            <div class="list">
+              <h3 class="heading">Policy</h3>
+              <ul class="whole">
+                <li class="part"><a href="">Company Policy</a></li>
+                <li class="part"><a href="">Privacy and Cookies</a></li>
+                <li class="part"><a href="">Services</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="second_blank"></div>
+          <div class="second_row">
+            <h3 class="heading">Contact Us</h3>
+            <p class="paragraph">
+              Ravensdale Industrial Estate, Unit 9, Timberwharf Rd, London N16 6DB, United Kingdom
+            </p>
+            <div class="phone">
+              Phone: <a href="tel:+442088023839">+44 20 8802 3839</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="copyright">
+      <p>© Copyright 2023 Springview Windows Ltd</p>
+    </div>
+    <!-- End Footer  -->
+
+    <!-- JS  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script  src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
+    <script src="js/main.js"></script>
+    <!-- END JS  -->
+
+  </body>
+</html>

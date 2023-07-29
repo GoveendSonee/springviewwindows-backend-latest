@@ -1,0 +1,227 @@
+<style>
+    /* CSS styles for the testimonial column, popup container, popup content, and close button */
+    
+    .testimonial-column {
+      /* Styles for the testimonial column */
+      cursor: pointer;
+    }
+  
+    .active {
+      /* Styles for the active state */
+      background-color: #f0f0f0;
+    }
+  
+    .popup-container {
+      /* Styles for the popup container */
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      overflow: auto;
+    }
+  
+    .popup-content {
+      /* Styles for the popup content */
+      color: #fff;
+      text-align: center;
+      font-size: 18px;
+      margin: 20px;
+    }
+  
+    .close {
+      /* Styles for the close button */
+      color: #fff;
+      font-size: 35px;
+      font-weight: bold;
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      cursor: pointer;
+    }
+  
+    .carousel {
+      /* Styles for the carousel */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 400px;
+      overflow: hidden;
+    }
+  
+    .carousel img {
+      /* Styles for the carousel images */
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  
+    .prev-icon,
+    .next-icon {
+      /* Styles for the previous and next icons */
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      cursor: pointer;
+    }
+  
+    .prev-icon {
+      left: 10px;
+    }
+  
+    .next-icon {
+      right: 10px;
+    }
+  
+    .download-icon {
+      /* Styles for the download icon */
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 20px;
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>
+  
+  <div class="testimonial-column" onclick="openPopup(1)">
+    <div class="can_gallery_slider">
+      <img src="img/frontdoor.png" alt="Image 1">
+    </div>
+    <!-- Add unique ID for each pop-up -->
+    <div class="popup-container" id="popup-container-1">
+      <div class="popup-content" id="popup-content-1">
+        <div class="carousel">
+          <!-- Carousel images for the first column will be appended here -->
+        </div>
+      </div>
+      <span class="close" onclick="closePopup(1)">&times;</span>
+    </div>
+  </div>
+  
+  <div class="testimonial-column" onclick="openPopup(2)">
+    <div class="can_gallery_slider">
+      <img src="img/frontdoor.png" alt="Image 1">
+    </div>
+    <!-- Add unique ID for each pop-up -->
+    <div class="popup-container" id="popup-container-2">
+      <div class="popup-content" id="popup-content-2">
+        <div class="carousel">
+          <!-- Carousel images for the second column will be appended here -->
+        </div>
+      </div>
+      <span class="close" onclick="closePopup(2)">&times;</span>
+    </div>
+  </div>
+  
+  <div class="testimonial-column" onclick="openPopup(3)">
+    <div class="can_gallery_slider">
+      <img src="img/frontdoor.png" alt="Image 1">
+    </div>
+    <!-- Add unique ID for each pop-up -->
+    <div class="popup-container" id="popup-container-3">
+      <div class="popup-content" id="popup-content-3">
+        <div class="carousel">
+          <!-- Carousel images for the third column will be appended here -->
+        </div>
+      </div>
+      <span class="close" onclick="closePopup(3)">&times;</span>
+    </div>
+  </div>
+  
+  <script>
+    // Store the carousel images and current index for each pop-up
+    const carouselImages = {
+      1: [],
+      2: [],
+      3: []
+    };
+    const currentIndex = {
+      1: 0,
+      2: 0,
+      3: 0
+    };
+  
+    function openPopup(column) {
+      // Get the relevant elements for the selected column
+      const popupContainer = document.getElementById(`popup-container-${column}`);
+      const popupContent = document.getElementById(`popup-content-${column}`);
+      const carousel = popupContent.querySelector('.carousel');
+  
+      // Clear existing carousel images
+      carousel.innerHTML = '';
+  
+      // Clone the carousel images from the clicked testimonial
+      const testimonialImages = document.querySelectorAll(`.testimonial-column:nth-child(${column}) .can_gallery_slider img`);
+      testimonialImages.forEach((image) => {
+        const clonedImage = image.cloneNode(true);
+        carousel.appendChild(clonedImage);
+      });
+  
+      // Show the popup
+      popupContainer.style.display = 'block';
+  
+      // Show the first image
+      showImage(column, currentIndex[column]);
+    }
+  
+    function closePopup(column) {
+      // Hide the popup
+      const popupContainer = document.getElementById(`popup-container-${column}`);
+      popupContainer.style.display = 'none';
+  
+      // Clear the carousel images
+      const carousel = document.getElementById(`popup-content-${column}`).querySelector('.carousel');
+      carousel.innerHTML = '';
+    }
+  
+    function showImage(column, index) {
+      const popupContent = document.getElementById(`popup-content-${column}`);
+      const galleryImages = popupContent.querySelectorAll('.can_gallery_slider img');
+      galleryImages.forEach((image, idx) => {
+        if (idx === index) {
+          image.classList.add('active');
+        } else {
+          image.classList.remove('active');
+        }
+      });
+    }
+  
+    function showNextImage(column) {
+      currentIndex[column]++;
+      const galleryImages = document.getElementById(`popup-content-${column}`).querySelectorAll('.can_gallery_slider img');
+      if (currentIndex[column] >= galleryImages.length) {
+        currentIndex[column] = 0;
+      }
+      showImage(column, currentIndex[column]);
+    }
+  
+    function showPreviousImage(column) {
+      currentIndex[column]--;
+      const galleryImages = document.getElementById(`popup-content-${column}`).querySelectorAll('.can_gallery_slider img');
+      if (currentIndex[column] < 0) {
+        currentIndex[column] = galleryImages.length - 1;
+      }
+      showImage(column, currentIndex[column]);
+    }
+  
+    function downloadImage(column) {
+      const popupContent = document.getElementById(`popup-content-${column}`);
+      const activeImage = popupContent.querySelector('.can_gallery_slider img.active');
+      const imageUrl = activeImage.getAttribute('src');
+  
+      // Create a temporary anchor element
+      const downloadLink = document.createElement('a');
+      downloadLink.href = imageUrl;
+      downloadLink.setAttribute('download', '');
+      downloadLink.click();
+    }
+  </script>
+  
