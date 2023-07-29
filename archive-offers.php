@@ -6,5 +6,8 @@ get_header();
 
 Offers Archive
 
+
+
+
 <?php
 get_footer();
