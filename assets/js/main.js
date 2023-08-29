@@ -113,22 +113,66 @@ var swiper = new Swiper(".mySwiper_exaltare", {
 
 
 // Category Single Page 
-var swiper = new Swiper(".mySwiper_category", {
-  cssMode: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + "</span>";
-    },
-  },
-  mousewheel: true,
-  keyboard: true,
-  speed: 1000,
+// var swiper = new Swiper(".mySwiper_category", {
+//   cssMode: true,
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//     renderBullet: function (index, className) {
+//       return '<span class="' + className + '">' + (index + 1) + "</span>";
+//     },
+//   },
+//   mousewheel: true,
+//   keyboard: true,
+//   speed: 1000,
+// });
+document.addEventListener('DOMContentLoaded', function () {
+  var mySwiper = new Swiper('.mySwiper_category', {
+    loop: true,
+    slidesPerView: 1,
+    centeredSlides: true,
+  });
+
+  var customPagination = document.querySelector('.custom-pagination');
+  var prevButton = document.getElementById('prevButton');
+  var nextButton = document.getElementById('nextButton');
+  var visiblePages = 6;
+
+  function updateCustomPagination() {
+    customPagination.innerHTML = '';
+    var startIndex = Math.max(0, mySwiper.realIndex - Math.floor(visiblePages / 2));
+    var endIndex = Math.min(mySwiper.slides.length - 1, startIndex + visiblePages - 1);
+    for (var i = startIndex; i <= endIndex; i++) {
+      var button = document.createElement('button');
+      button.classList.add('custom-pagination-button');
+      if (i === mySwiper.realIndex) {
+        button.classList.add('active');
+      }
+      button.textContent = i + 1;
+      button.addEventListener('click', function () {
+        mySwiper.slideTo(Number(this.textContent) - 1);
+      });
+      customPagination.appendChild(button);
+    }
+  }
+
+  prevButton.addEventListener('click', function () {
+    mySwiper.slidePrev();
+  });
+
+  nextButton.addEventListener('click', function () {
+    mySwiper.slideNext();
+  });
+
+  mySwiper.on('slideChange', function () {
+    updateCustomPagination();
+  });
+
+  updateCustomPagination();
 });
 
 

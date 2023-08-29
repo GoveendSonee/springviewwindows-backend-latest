@@ -77,6 +77,7 @@
     </div>
   </div>
 </section>
+
 <!-- Offer Section  -->
 <section id="offer_part" style="margin: -1rem 0 0;">
 

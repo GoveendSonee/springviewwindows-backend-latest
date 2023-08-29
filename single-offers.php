@@ -15,7 +15,6 @@ get_header();
 while (have_posts()) { the_post();
 
 ?>
-
     <!-- Heading  -->
     <section id="heading_second_pages">
         <div class="container">
@@ -28,7 +27,6 @@ while (have_posts()) { the_post();
         </div>
     </section>
     <!-- End Heading  -->
-
     <!-- Category Single Page  -->
     <section id="category_single">
       <div class="container___">
@@ -60,10 +58,11 @@ while (have_posts()) { the_post();
                     <div class="property">
                       <?php if ( have_rows( 'product_' ) ) : ?>
                         <?php while ( have_rows( 'product_' ) ) : the_row(); ?>
-                          <div class="heading"><?php the_sub_field( 'properties_heading' ); ?> </div>
+                          <div class="heading"><?php the_sub_field( 'properties_heading' ); ?></div>
                           <?php the_sub_field( 'description' ); ?>
                         <?php endwhile; ?>
                       <?php endif; ?>
+                     
 
                       <?php if ( have_rows( 'specification_properties' ) ) : ?>
 	                    <?php while ( have_rows( 'specification_properties' ) ) : the_row(); ?>

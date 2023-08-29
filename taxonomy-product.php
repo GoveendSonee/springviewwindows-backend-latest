@@ -7,14 +7,12 @@
  * @package amberline
  */
 	get_header();
-	
 ?>
 
     <!-- Heading  -->
     <section id="heading_second_pages">
         <div class="container">
-        <a  id="back-link" href="">
-
+          <a  id="back-link" href="">
                 <div class="previous">
                     <div class="icon"><i class='bx bx-arrow-back'></i><small>Back</small></div>
                 </div>
@@ -22,6 +20,144 @@
         </div>
     </section>
     <!-- End Heading  -->
+
+    <section id="offer_part" style="margin: -1rem 0 0;">
+      <div class="hero">
+        <nav class="nav_class">
+         
+          <?php
+
+            $term = get_queried_object();
+            $taxonomy = $term->taxonomy;
+
+            // Determine the parent category for maintaining consistency
+            $parent_term = $term;
+            while ($parent_term->parent != 0) {
+                $parent_term = get_term($parent_term->parent, $taxonomy);
+            }
+
+            // Create an array to store the term hierarchy
+            $term_hierarchy = array();
+
+            // Build the term hierarchy
+            $current_term = $parent_term;
+            while ($current_term->parent != 0) {
+                array_unshift($term_hierarchy, $current_term);
+                $current_term = get_term($current_term->parent, $taxonomy);
+            }
+            array_unshift($term_hierarchy, $current_term); // Add the top-level term
+
+            // Get the child terms (categories) of the parent term
+            $child_terms = get_terms(array(
+                'taxonomy' => $taxonomy,
+                'parent' => $parent_term->term_id,
+            ));
+
+            if (!empty($child_terms) && !is_wp_error($child_terms)) {
+                echo '<ul>';
+                foreach ($child_terms as $child_term) {
+                    $active_class = ($child_term->term_id === $term->term_id) ? 'active_sub_field' : '';
+                    echo '<li class="' . esc_attr($active_class) . '"><a href="' . esc_url(get_term_link($child_term)) . '">' . esc_html($child_term->name) . '</a></li>';
+                }
+                echo '</ul>';
+            } else {
+                echo '';
+            }
+
+            // $term = get_queried_object();
+            // $taxonomy = $term->taxonomy;
+
+            // // Determine the parent category for maintaining consistency
+            // $parent_term = $term;
+            // while ($parent_term->parent != 0) {
+            //     $parent_term = get_term($parent_term->parent, $taxonomy);
+            // }
+
+            // // Create an array to store the term hierarchy
+            // $term_hierarchy = array();
+
+            // // Build the term hierarchy
+            // $current_term = $parent_term;
+            // while ($current_term->parent != 0) {
+            //     array_unshift($term_hierarchy, $current_term);
+            //     $current_term = get_term($current_term->parent, $taxonomy);
+            // }
+            // array_unshift($term_hierarchy, $current_term); // Add the top-level term
+
+            // // Output the term hierarchy
+            // echo '<ul class="category-navigation">';
+            // foreach ($term_hierarchy as $hierarchical_term) {
+            //     echo '<li><a href="' . esc_url(get_term_link($hierarchical_term)) . '">' . esc_html($hierarchical_term->name) . '</a></li>';
+            // }
+            // echo '</ul>';
+
+            // // Output current term name and description
+            // echo '<h1>' . single_term_title('', false) . '</h1>';
+            // echo term_description();
+
+            // // Get the child terms (categories) of the parent term
+            // $child_terms = get_terms(array(
+            //     'taxonomy' => $taxonomy,
+            //     'parent' => $parent_term->term_id,
+            // ));
+
+            // if (!empty($child_terms) && !is_wp_error($child_terms)) {
+            //     echo '<ul>';
+            //     foreach ($child_terms as $child_term) {
+            //       $active_class = ($child_term->term_id === $term->term_id) ? 'active' : '';
+            //         echo '<li class="' . esc_attr($active_class) . '"><a href="' . esc_url(get_term_link($child_term)) . '">' . esc_html($child_term->name) . '</a></li>';
+            //     }
+            //     echo '</ul>';
+            // } else {
+            //     echo 'No subcategories found.';
+            // }
+
+          ?>
+
+<!-- 
+
+              $term = get_queried_object();
+              $taxonomy = $term->taxonomy;
+              $term_id = $term->term_id;
+
+              // Get all parent categories
+              $parent_categories = get_ancestors($term_id, $taxonomy, 'taxonomy');
+              $parent_categories = array_reverse($parent_categories);
+
+              // Output all parent categories
+              if (!empty($parent_categories)) {
+                  echo '<ul>';
+                  foreach ($parent_categories as $parent_id) {
+                      $parent_term = get_term($parent_id, $taxonomy);
+                      echo '<li><a href="' . esc_url(get_term_link($parent_term)) . '" class="underline-effect">' . esc_html($parent_term->name) . '</a></li>';
+                  }
+                  echo '</ul>';
+              }
+
+              // Output current term name and description
+              // echo '<h1>' . single_term_title('', false) . '</h1>';
+              // echo term_description();
+
+              // Get the child terms (categories) of the current term
+              $child_terms = get_terms(array(
+                  'taxonomy' => $taxonomy,
+                  'parent' => $term_id,
+              ));
+
+              if (!empty($child_terms) && !is_wp_error($child_terms)) {
+                  echo '<ul>';
+                  foreach ($child_terms as $child_term) {
+                      echo '<li><a href="' . esc_url(get_term_link($child_term)) . '" class="underline-effect">' . esc_html($child_term->name) . '</a></li>';
+                  }
+                  echo '</ul>';
+              } else {
+                  echo '<p class="test" style="text-align: center;">No subcategories found.</p>';
+              } -->
+
+          
+        </nav>
+      </div>
+    </section>
 
     <!-- Category Single Page  -->
     <section id="category_single">
@@ -59,7 +195,7 @@
                     <div class="property">
                       <?php if ( have_rows( 'product_' ) ) : ?>
                         <?php while ( have_rows( 'product_' ) ) : the_row(); ?>
-                          <div class="heading"><?php the_sub_field( 'properties_heading' ); ?> </div>
+                          <div class="heading"><?php the_sub_field( 'properties_heading' ); ?></div>
                           
                           <?php the_sub_field( 'description' ); ?>
                           
@@ -86,8 +222,7 @@
 
                       <?php endwhile; ?>
                       <?php endif; ?>
-                      
-                                                <?php
+                          <?php
                             $the_content = apply_filters('the_content', get_the_content());
                             if ( !empty($the_content) ) {
                           ?>
@@ -211,7 +346,13 @@
               ?>
             </div>
             
-            <div class="swiper-pagination"></div>
+            <div class="springview-windowspagination">
+            <div class="custom-pagination"></div>
+              <div class="custom-navigation">
+                <button class="custom-navigation-button" id="prevButton">Previous</button>
+                <button class="custom-navigation-button" id="nextButton">Next</button>
+              </div>
+            </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
           </div>
@@ -220,7 +361,6 @@
       </div>
     </section>
     <!-- End Category Single Page  -->
-
     
 <?php
 get_footer();
