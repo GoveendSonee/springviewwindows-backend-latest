@@ -10,44 +10,74 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<!-- Heading  -->
+	<section id="heading_pages">
+        <div class="container">
+            <div class="topic_page">
+                <h1 class="head">Search Results:- <?php echo (get_search_query()); ?> </h1>
+                <hr class="hr_headinggallery">
+            </div>
+        </div>
+    </section>
+    <!-- End Heading  -->
 
-		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'amberline' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
-
+	<section id="homapgethirdcard" class="of_res">
+		<div class="container">
+			<div class="card_third">
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+				// Check if there are search results
+				if (have_posts()) {
+				while (have_posts()) {
+					the_post();
+					$search_query = get_search_query();
+					// Get the taxonomy names
+					$taxonomy_name = 'product'; 
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
+					// Get the terms (taxonomy names) for the post
+					$terms = get_the_terms(get_the_ID(), $taxonomy_name);
 
-			endwhile;
+					$term_names = array();
+					if ($terms && !is_wp_error($terms)) {
+						foreach ($terms as $term) {
+							$term_names[] = '<a href="' . esc_url(get_term_link($term, $taxonomy_name)) . '">' . $term->name . '</a>';
+						}
+					}
+					
+					// Display content for the 'offers' custom post type
+					if (get_post_type() === 'offers') {
+				?>
+				<div class="first">
+					<?php if (stripos(get_the_title(), $search_query) !== false || stripos(get_the_excerpt(), $search_query) !== false) { ?>
 
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-	</main><!-- #main -->
-
+					<?php if ( get_field( 'first_image' ) ) : ?>
+							<img class="ro_spring" src="<?php the_field( 'first_image' ); ?>" alt="">
+					<?php endif ?>
+					<span class="acti" style="background: #f2f9ef; padding: 0.5rem;">
+						<?php
+							if (!empty($term_names)) {
+								echo '<small>Products Category: ' . implode(', ', $term_names) . '</small>';
+							}
+						?>
+					</span>  
+				
+						<?php echo '<h3 class="titple""><a href="' . esc_url(get_permalink()) . '" style="font-size: 1rem!important; font-weight: 400; padding: 0.5rem 0!important;">' . preg_replace('/(' . preg_quote($search_query, '/') . ')/i', '<span class="search-highlight" style="background-color: #ffcc00; font-weight: bold; color: #000;">$1</span>', get_the_title()) . '</a></h3>'; ?>	
+							<div class="para">
+								<?php echo '<p class="search-result-content">' . preg_replace('/(' . preg_quote($search_query, '/') . ')/i', '<span class="search-highlight" style="background-color: #ffcc00; font-weight: bold; color: #000;">$1</span>', wp_trim_words(get_the_excerpt(), 30, '...')) . '</p>'; ?>
+							</div>
+					<?php } ?>
+				</div>
+				<?php
+					} 
+						}
+					} else {
+						echo 'No search results found.';
+					}
+				?>
+			</div>
+		</div>
+	</section>
+    
 <?php
-get_sidebar();
 get_footer();
+?>
